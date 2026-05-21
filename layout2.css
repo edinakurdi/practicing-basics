@@ -1,0 +1,30 @@
+body {
+    min-height: 100dvh;
+        /* this is the minimum height of the body, and it is set to 100% of the viewport height */
+        /* this is used to make sure that the body takes up the entire height of the viewport, even if the content is not enough to fill it */
+        display: flex;
+        /* this sets the display of the body to flex, which allows us to use flexbox properties to align the content */
+        flex-direction: column;
+        justify-content: center;
+        /* this centers the content horizontally */
+        align-items: center;
+        /* this centers the content vertically */
+        padding: 2%;
+    }
+
+.box {
+    background-color: teal;
+}
+
+.grid-container {
+    display: grid;
+    /* grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(2, 200px); */
+    grid-auto-columns: 200px;
+    grid-auto-rows: 200px;
+    /* this sets the size of the grid tracks used for auto-placed items - excellent for responsive design */
+    gap: 1em;
+    grid-template-areas:
+    "box-1 box-2 box-2 box-3"
+    "box-1 box-4 box-5 box-5";
+}
